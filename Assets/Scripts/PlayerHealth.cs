@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class PlayerHealth : MonoBehaviour
 {
         public int maxHealth = 100;
@@ -26,5 +27,19 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
+
+            if(currentHealth <= 0)
+            {
+                Die();
+                return;
+            }
         }
+    public void Die()
+    {
+        Debug.Log("Le joueur est éliminé");
+        PlayerMovement.instance.enabled = false;
+        PlayerMovement.instance.animator.SetTrigger("Die");
+        PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
+        PlayerMovement.instance.playerCollider.enabled = false;
+    }
 }
