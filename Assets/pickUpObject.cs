@@ -1,11 +1,11 @@
 
 using UnityEngine;
 
-public class pickUpObject : MonoBehaviour
+public class PickUpObject : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.compareTag("Player"))
+        if(collision.CompareTag("Player"))
         {
             Inventory.instance.AddCoins(1);
             Destroy(gameObject);

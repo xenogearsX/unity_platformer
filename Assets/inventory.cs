@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
-public class inventory : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   public int coinsCount;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   public static Inventory instance;
+   private void Awake()
+   {
+       if(instance != null)
+       {
+           Debug.LogWarning("il y a plus d'une instance d'inventory dans la scène");
+           return;
+       }
+       instance = this;
+   }
+   public void AddCoins(int count)
+   {
+       coinsCount += count;
+   }
 }
