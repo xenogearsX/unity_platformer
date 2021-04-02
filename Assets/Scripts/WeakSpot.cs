@@ -3,15 +3,15 @@ using UnityEngine;
 public class WeakSpot : MonoBehaviour
 {
     public GameObject objectToDestroy;
+    public AudioClip killSound;
+    public AudioSource audioSource;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // la condition va chercher le tag associé au player
         if (collision.CompareTag("Player"))
         {
-            // va supprimer l ensemble des fichier present dans enemi
+            AudioSource.PlayClipAtPoint(killSound, transform.position);
             Destroy(objectToDestroy);
         }
     }
-    
 }
