@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
 
         public HealthBar healthBar;
 
+        public static PlayerHealth instance;
+
         void Start()
         {
             currentHealth = maxHealth;
