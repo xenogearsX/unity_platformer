@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isJumping;
     public bool isGrounded;
-    [HideInInspector]
     public bool isClimbing;
 
     public Transform groundCheck;
