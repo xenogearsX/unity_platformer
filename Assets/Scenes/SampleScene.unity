@@ -503,6 +503,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 81585281}
   - {fileID: 1785638832}
+  damageOnCollision: 20
   chicken: {fileID: 716965704}
 --- !u!61 &716965703
 BoxCollider2D:
@@ -994,6 +995,54 @@ PrefabInstance:
     - target: {fileID: 5937006095254819682, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.ctime1
+      value: 34310
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.key0.b
+      value: 0.15886435
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.key0.g
+      value: 0.19777514
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.key0.r
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.key1.b
+      value: 0.15419187
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.key1.g
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.key1.r
+      value: 0.87455124
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.key2.b
+      value: 0.20958376
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.key2.g
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.key2.r
+      value: 0.20425421
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937006095488214185, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
+      propertyPath: gradient.m_NumColorKeys
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5937006096770665638, guid: e0a3c177cbab4ce469bd7a22913bff86, type: 3}
       propertyPath: m_Pivot.x

@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour
             healthBar.SetHealth(currentHealth);
             isInvincible = true;
             StartCoroutine(InvincibilityFlash());
-            StartCoroutine(HandleInvincibilityDela());
+            StartCoroutine(HandleInvincibilityDelay());
             }
         }
         public IEnumerator InvincibilityFlash()
