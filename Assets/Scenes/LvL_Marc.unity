@@ -1153,8 +1153,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3166886023977951252, guid: 8d68e2dbf04b0e247acf7bbb0ce30139, type: 3}
+      propertyPath: playerCollider
+      value: 
+      objectReference: {fileID: 395043127}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d68e2dbf04b0e247acf7bbb0ce30139, type: 3}
+--- !u!70 &395043127 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3166886023977951253, guid: 8d68e2dbf04b0e247acf7bbb0ce30139, type: 3}
+  m_PrefabInstance: {fileID: 395043126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

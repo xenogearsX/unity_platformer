@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public CapsuleCollider2D playerCollider;
 
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;

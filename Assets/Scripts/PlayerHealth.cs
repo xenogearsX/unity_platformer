@@ -40,6 +40,12 @@ public class PlayerHealth : MonoBehaviour
             StartCoroutine(InvincibilityFlash());
             StartCoroutine(HandleInvincibilityDelay());
             }
+            if(currentHealth <= 0)
+             {
+                 Die();
+                 return;
+             }
+         
         }
         public IEnumerator InvincibilityFlash()
         {
@@ -56,5 +62,13 @@ public class PlayerHealth : MonoBehaviour
         {
             yield return new WaitForSeconds(invincibilityTimeAfterIt);
             isInvincible = false;
+        }
+        public void Die()
+        {
+         Debug.Log("Le joueur est éliminé");
+         PlayerMovement.instance.enabled = false;
+         PlayerMovement.instance.animator.SetTrigger("Die");
+         PlayerMovement.instance.rb.bodyType = RigidbodyType2D.Kinematic;
+         PlayerMovement.instance.playerCollider.enabled = false;
         }
 }
