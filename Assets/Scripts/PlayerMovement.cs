@@ -19,6 +19,19 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
     private float horizontalMovement;
 
+    public static PlayerMovement instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PlayerMovement dans la scène");
+            return;
+        }
+
+        instance = this;
+    }
+
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
