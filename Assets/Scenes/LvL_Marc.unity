@@ -168,7 +168,7 @@ Transform:
   - {fileID: 242203703}
   - {fileID: 102028417}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &102028416
 GameObject:
@@ -3430,6 +3430,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab8b4d3d3ca4e734a925c087cb35c8eb, type: 3}
+--- !u!61 &732607569 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4265213016576140784, guid: fc02087919ebd40a693d4dfbdfb21782, type: 3}
+  m_PrefabInstance: {fileID: 4265213015962292641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &789664801
 GameObject:
   m_ObjectHideFlags: 0
@@ -4083,7 +4088,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776025646}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4238084ac09bdab43ac52732d9fb0920, type: 2}
   m_CullingMode: 0
@@ -4123,10 +4128,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 250
+  climbSpeed: 150
   jumpForce: 300
-  ClimbSpeed: 200
-  isJumping: 0
-  isGrounded: 0
   isClimbing: 0
   groundCheck: {fileID: 366157800}
   groundCheckRadius: 0.34
@@ -4136,6 +4139,7 @@ MonoBehaviour:
   rb: {fileID: 1776025650}
   animator: {fileID: 1776025647}
   spriteRenderer: {fileID: 1776025651}
+  playerCollider: {fileID: 0}
 --- !u!50 &1776025650
 Rigidbody2D:
   serializedVersion: 4
@@ -25377,7 +25381,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4265213016388775232, guid: fc02087919ebd40a693d4dfbdfb21782, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4265213016388775232, guid: fc02087919ebd40a693d4dfbdfb21782, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25419,6 +25423,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4265213016388775233, guid: fc02087919ebd40a693d4dfbdfb21782, type: 3}
+      propertyPath: floor
+      value: 
+      objectReference: {fileID: 732607569}
     - target: {fileID: 4265213016388775295, guid: fc02087919ebd40a693d4dfbdfb21782, type: 3}
       propertyPath: m_Name
       value: Ladder
