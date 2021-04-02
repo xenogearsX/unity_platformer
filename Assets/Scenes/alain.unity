@@ -1040,6 +1040,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 271267642}
+  killSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &550758105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1141,6 +1143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 1931701839}
+  killSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &675427602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1756,6 +1760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 1005372738}
+  killSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1069372527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1860,6 +1866,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 1584577821}
+  killSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1315081126
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2166,6 +2174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 1279233502}
+  killSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1467288333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2366,6 +2376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 1644275734}
+  killSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &1666644670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2493,8 +2505,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 250
   jumpForce: 350
+  ClimbSpeed: 0
   isJumping: 0
   isGrounded: 0
+  isClimbing: 0
   groundCheck: {fileID: 366157800}
   groundCheckRadius: 0.34
   collisionLayers:
@@ -2503,7 +2517,7 @@ MonoBehaviour:
   rb: {fileID: 1776025650}
   animator: {fileID: 1776025647}
   spriteRenderer: {fileID: 1776025651}
-  playerCollider: {fileID: 1776025648}
+  playerCollider: {fileID: 0}
 --- !u!50 &1776025650
 Rigidbody2D:
   serializedVersion: 4
@@ -95283,6 +95297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 1540986400}
+  killSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!61 &2129409933
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -95487,6 +95503,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2896224889176363947, guid: ab8b4d3d3ca4e734a925c087cb35c8eb, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4048053986480638852, guid: ab8b4d3d3ca4e734a925c087cb35c8eb, type: 3}
       propertyPath: m_RootOrder
       value: 13
