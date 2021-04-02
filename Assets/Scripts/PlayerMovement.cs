@@ -3,11 +3,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+    public float climbSpeed;
     public float jumpForce;
-    public float ClimbSpeed;
 
-    public bool isJumping;
-    public bool isGrounded;
+    private bool isJumping;
+    private bool isGrounded;
     [HideInInspector]
     public bool isClimbing;
 
@@ -39,14 +39,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
+        horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
+        verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
 
-        horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        verticalMovement = Input.GetAxis("Vertical") * ClimbSpeed * Time.deltaTime;
-        Debug.Log("poulet0");
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && !isClimbing)
         {
-            Debug.Log("poulet1");
             isJumping = true;
         }
 
@@ -54,12 +51,12 @@ public class PlayerMovement : MonoBehaviour
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
-        // va chercher dans player animator la variable isClimbing et lui applique l etait de la variable is climbing du script
         animator.SetBool("isClimbing", isClimbing);
     }
 
     void FixedUpdate()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayers);
         MovePlayer(horizontalMovement, verticalMovement);
     }
 
@@ -70,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
             Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
 
-            if (isJumping == true)
+            if (isJumping)
             {
                 rb.AddForce(new Vector2(0f, jumpForce));
                 isJumping = false;
@@ -81,19 +78,21 @@ public class PlayerMovement : MonoBehaviour
             Vector3 targetVelocity = new Vector2(0, _verticalMovement);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
         }
+
     }
-
-
 
     void Flip(float _velocity)
     {
-        if(_velocity > 0.1f)
+        if (_velocity > 0.1f)
         {
             spriteRenderer.flipX = false;
-        }else if(_velocity < -0.1f){
+        }
+        else if (_velocity < -0.1f)
+        {
             spriteRenderer.flipX = true;
         }
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
